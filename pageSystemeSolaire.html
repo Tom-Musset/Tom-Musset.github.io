@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding house</title>
+	<meta charset="utf-8">
+	<script src="https://kit.fontawesome.com/225b7160b0.js" crossorigin="anonymous"></script>
+	<link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+	<header>
+		<div class="centercolumn">
+        		<h1>CODE ACADEMIA</h1>
+    </div><!-- .centercolumn -->
+	</header>
+<br>
+<br>
+<br>
+<br>
+
+  <div class="bouton" >
+            <p>
+                <a href="site.html">Acceuil</a>
+            </p>
+  </div>
+  <br>
+  <br>
+
+    <div id="content">     
+        <div class="centercolumn">
+          <br>
+          <center>
+             <img src="image/systèmeSolaire.gif" width="100%">
+           </center>
+        </div>
+      </div>
+
+<br>
+<br>
+
+
+    <div id="content">
+      <div class="centercolumn">
+        <center>
+        <textarea rows="30" cols="100">
+
+void setup() {
+  fullScreen(P3D);
+}
+
+void draw() {
+  background(0);
+  pointLight(255, 255, 255, width/2, height/2, 200000);
+  noStroke();
+
+
+
+  // soleil
+  pushMatrix();
+  fill(255,85,0);
+  translate(width/2, height/2);
+  sphere(height/30);
+
+  //mercure
+  pushMatrix();
+  rotate(frameCount * -0.005);
+  translate(width/30, height/30);
+  fill(50);
+  sphere((height/30)/10);
+  popMatrix();
+
+  //venus
+  pushMatrix();
+   rotate(frameCount * -0.003);
+  translate(width/22, height/22);
+  fill(255,134,73);
+  sphere((height/30)/8);
+  popMatrix();
+
+  // La terre
+  pushMatrix();
+  rotate(frameCount * -0.01);
+  translate(width/15, height/15);
+  fill(0,135,255);
+  sphere((height/30)/7);
+
+  // La lune de la terre
+  rotate(frameCount * -0.01);
+  translate(width/100, height/100);
+  fill(100);
+  sphere(height/30/30);
+  popMatrix();
+
+  // Mars
+  pushMatrix();
+  rotate(frameCount * -0.015 );
+  translate(width/10, height/10);
+  fill(255,100,107);
+  sphere((height/30)/6.8);
+
+  // Premiere lune de Mars
+  pushMatrix();
+  rotate(frameCount * -0.01);
+  translate(width/100, height/100);
+  fill(255,226,173);
+  sphere((height/30)/30);
+  popMatrix();
+
+  //deuxième lune de Mars
+  pushMatrix();
+  rotate(frameCount * -0.02);
+  translate(width/70, height/70);
+  fill(211,211,211);
+  sphere((height/30)/30);
+  popMatrix();
+
+  popMatrix();
+
+  //Jupiter
+  pushMatrix();
+  rotate(frameCount * -0.04 );
+  translate(width/6.5, height/6.5);
+  fill(122,105,73);
+  sphere((height/30)/3);
+  popMatrix();
+
+  //saturne
+  pushMatrix();
+  rotate(frameCount *-0.035 );
+  translate(width/5, height/5);
+  fill(202,174,120);
+  sphere((height/30)/4);
+  popMatrix();
+
+  //Uranus
+  pushMatrix();
+  rotate(frameCount * -0.03 );
+  translate(width/4.2, height/4.2);
+  fill(154,195,210);
+  sphere((height/30)/5);
+  popMatrix();
+
+  //Naptune
+  pushMatrix();
+  rotate(frameCount * -0.027);
+  translate(width/3.8, height/3.8);
+  fill(0,70,255);
+  sphere((height/30)/5);
+  popMatrix();
+
+  popMatrix();
+}
+          </textarea>
+       </center>
+     </div>
+    </div>
+<br>
+<br>
+<br>
+<br>
+
+
+	<footer>
+		<div class="centercolumn">
+        	<p>Tu peux me contacter ici:</p>
+			<ul>
+				<li> <p> <i class="fas fa-envelope-open-text"></i> : Tommusset@hotmail.fr</p></li>
+			</ul>
+		</div><!-- .centercolumn -->
+	</footer>
+
+</body>
+</html>

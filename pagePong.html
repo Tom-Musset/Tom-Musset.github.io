@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding house</title>
+	<meta charset="utf-8">
+	<script src="https://kit.fontawesome.com/225b7160b0.js" crossorigin="anonymous"></script>
+	<link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+	<header>
+		<div class="centercolumn">
+        		<h1>CODE ACADEMIA</h1>
+    </div><!-- .centercolumn -->
+	</header>
+<br>
+<br>
+<br>
+<br>
+
+  <div class="bouton" >
+            <p>
+                <a href="site.html">Acceuil</a>
+            </p>
+  </div>
+  <br>
+  <br>
+
+    <div id="content">     
+        <div class="centercolumn">
+          <br>
+          <p style="text-align: center">Ce jeu n'est pas fini...</p>
+          <br>
+          <center>
+             <img src="image/pong.gif" width="100%" style="border-radius: 10%">
+           </center>
+        </div>
+      </div>
+
+<br>
+<br>
+
+
+    <div id="content">
+      <div class="centercolumn">
+        <center>
+        <textarea rows="30" cols="100">
+float c;
+int x, y, deplacementX, deplacementY,p;
+
+void setup() {
+  fullScreen();
+  colorMode(RGB);
+  frameRate(30);
+  deplacementX=3;
+  deplacementY=20;
+  p=0;
+}
+
+void draw() {
+  //background
+  if (c >= 255)  c--;  
+  else  c++;
+  background(c, c*2, c);
+
+  //barre de jeu
+  fill(0);
+  rect(mouseX-150, 1000, 300, 20);
+
+  //barre de points
+  textSize(20);
+  text("score:"+p,width*0.05,height*0.05);
+
+  //balle
+  ellipse(x, y, 20, 20);
+
+  //mouvement
+  x=x+deplacementX;
+  y=y+deplacementY;
+
+  //rebond
+  if (x>=width || (x < 0 ) ) {
+    deplacementX=-deplacementX;
+  }
+  if (y < 0 ) {
+    deplacementY=-deplacementY;
+  }
+  if (x>=mouseX-150 && x<=mouseX+150 && y==1000) {
+    deplacementX=deplacementX+2;
+    deplacementY=deplacementY+2;
+    deplacementY=-deplacementY;
+    p=p+1;
+  }
+  if(y>=height){
+   deplacementY=0;
+   deplacementX=0;
+   textSize(80);
+   text("GAME OVER",width*0.37,height/2);
+   rect(width*0.41,height/1.7,300,50);
+   textSize(32);
+   fill(255);
+   text("REPLAY",width*0.46,height/1.6);
+   if(mousePressed){
+     if(mouseX>=width*0.41 && mouseY>=height/1.7){
+      clear();
+     }
+  }
+}
+}
+          </textarea>
+       </center>
+     </div>
+    </div>
+<br>
+<br>
+<br>
+<br>
+
+
+	<footer>
+		<div class="centercolumn">
+        	<p>Tu peux me contacter ici:</p>
+			<ul>
+				<li> <p> <i class="fas fa-envelope-open-text"></i> : Tommusset@hotmail.fr</p></li>
+			</ul>
+		</div><!-- .centercolumn -->
+	</footer>
+
+</body>
+</html>

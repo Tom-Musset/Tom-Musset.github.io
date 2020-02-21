@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding house</title>
+	<meta charset="utf-8">
+	<script src="https://kit.fontawesome.com/225b7160b0.js" crossorigin="anonymous"></script>
+	<link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+	<header>
+		<div class="centercolumn">
+        		<h1>CODE ACADEMIA</h1>
+    </div><!-- .centercolumn -->
+	</header>
+<br>
+<br>
+<br>
+<br>
+
+  <div class="bouton" >
+            <p>
+                <a href="site.html">Acceuil</a>
+            </p>
+  </div>
+  <br>
+  <br>
+
+    <div id="content">     
+        <div class="centercolumn">
+          <br>
+          <center>
+             <img src="image/rainbowMoon.gif" width="100%">
+           </center>
+        </div>
+      </div>
+
+<br>
+<br>
+
+
+    <div id="content">
+      <div class="centercolumn">
+        <center>
+        <textarea rows="30" cols="100">
+float c;
+
+void setup() {
+  fullScreen(P3D);
+  colorMode(HSB);
+  background(0);
+}
+
+void draw() {
+  //sphère principale
+  noStroke();
+  spotLight(c, 255, 255, width*10, height*10, 0, width/2, height/2, 400, PI, 0);
+  translate(width/2, height/2, 400);
+  sphere(height*0.1);
+  delay(100);
+
+  //effet rainbow
+  if (c >= 255)  c=0;  
+  else  c++;
+}
+          </textarea>
+       </center>
+     </div>
+    </div>
+<br>
+<br>
+<br>
+<br>
+
+
+	<footer>
+		<div class="centercolumn">
+        	<p>Tu peux me contacter ici:</p>
+			<ul>
+				<li> <p> <i class="fas fa-envelope-open-text"></i> : Tommusset@hotmail.fr</p></li>
+			</ul>
+		</div><!-- .centercolumn -->
+	</footer>
+
+</body>
+</html>
